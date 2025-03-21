@@ -3,8 +3,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import type { Customer } from "@/types/customer"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { CustomerInfo } from "@/components/customer-info"
-import { CustomerConnections } from "@/components/customer-connections"
+import CustomerInfo from "@/components/customer-info"
+import CustomerConnections from "@/components/customer-connections"
 import { User } from "lucide-react"
 
 interface CustomerDetailProps {

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { CustomerList } from "@/components/customer-list"
-import { CustomerDetail } from "@/components/customer-detail"
+import CustomerDetail from "@/components/customer-detail"
 import { CustomerFilters } from "@/components/customer-filters"
 import type { Customer } from "@/types/customer"
 import { fetchCustomers } from "@/lib/data"
