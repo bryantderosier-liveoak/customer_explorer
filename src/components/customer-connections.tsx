@@ -8,7 +8,7 @@ import { Network, Search, Filter } from "lucide-react"
 interface CustomerConnectionsProps {
   customer: Customer
   allCustomers: Customer[]
-  onSelectCustomer: (customer: Customer) => void
+  onSelectCustomer?: (customer: Customer) => void
 }
 
 interface ConnectionWithCustomer extends Connection {
@@ -140,7 +140,7 @@ export default function CustomerConnections({ customer, allCustomers, onSelectCu
         
         if (distance < 45) { // nodeRadius
           const connectedCustomer = allCustomers.find(c => c.id === connection.customerId)
-          if (connectedCustomer) {
+          if (connectedCustomer && onSelectCustomer) {
             onSelectCustomer(connectedCustomer)
           }
         }
@@ -234,7 +234,11 @@ export default function CustomerConnections({ customer, allCustomers, onSelectCu
                   <Card 
                     key={connection.customerId}
                     className="p-4 cursor-pointer hover:border-[#1C0E52] transition-colors"
-                    onClick={() => onSelectCustomer(connectedCustomer)}
+                    onClick={() => {
+                      if (onSelectCustomer) {
+                        onSelectCustomer(connectedCustomer)
+                      }
+                    }}
                   >
                     <span className="inline-block px-3 py-1 text-sm rounded-full bg-[#F7F6FB] text-[#1C0E52] mb-3">
                       {connection.type}

@@ -9,7 +9,7 @@ import type { Customer } from "@/types/customer"
 interface CustomerDetailProps {
   customer: Customer
   allCustomers: Customer[]
-  onSelectCustomer: (customer: Customer) => void
+  onSelectCustomer?: (customer: Customer) => void
 }
 
 export default function CustomerDetail({ customer, allCustomers, onSelectCustomer }: CustomerDetailProps) {
