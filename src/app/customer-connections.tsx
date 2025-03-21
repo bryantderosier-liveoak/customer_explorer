@@ -55,7 +55,7 @@ export function CustomerConnections({ customer, allCustomers }: CustomerConnecti
         <Network className="h-12 w-12 text-muted-foreground mb-4" />
         <h3 className="text-lg font-medium">No Connections Found</h3>
         <p className="text-muted-foreground mt-2">
-          This customer doesn't have any detected connections with other customers.
+          This customer does not have any detected connections with other customers.
         </p>
       </div>
     )

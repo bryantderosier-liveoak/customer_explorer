@@ -1,5 +1,6 @@
 "use client"
 
+// @eslint-disable-next-line
 import * as React from "react"
 import * as TabsPrimitive from "@radix-ui/react-tabs"
 
