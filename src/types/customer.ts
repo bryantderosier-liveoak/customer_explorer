@@ -23,7 +23,7 @@ export interface Customer {
   status: string;
   creditScore: number;
   tin: string;
-  customerSince?: string;
+  customerSince?: Date;
   notes?: string;
   connections: Connection[];
 }

@@ -31,7 +31,7 @@ export function CustomerInfo({ customer }: CustomerInfoProps) {
         <InfoItem
           icon={<Calendar className="h-5 w-5" />}
           label="Customer Since"
-          value={new Date(customer.customerSince).toLocaleDateString()}
+          value={customer.customerSince ? new Date(customer.customerSince).toLocaleDateString() : new Date().toLocaleDateString() }
         />
 
         <InfoItem icon={<Tag className="h-5 w-5" />} label="Status" value={customer.status} isStatus />
