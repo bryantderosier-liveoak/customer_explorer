@@ -16,13 +16,13 @@ export default function CustomerInfo({ customer }: CustomerInfoProps) {
         <InfoItem
           icon={<Hash className="h-4 w-4" />}
           label="Customer ID"
-          value={customer.customerId}
+          value={customer.customerId as string}
           isMono={true}
         />
         <InfoItem
           icon={<FileText className="h-4 w-4" />}
           label="TIN"
-          value={customer.tin}
+          value={customer.tin  as string}
           isMono={true}
         />
         <InfoItem
@@ -33,7 +33,7 @@ export default function CustomerInfo({ customer }: CustomerInfoProps) {
         <InfoItem
           icon={<TrendingUp className="h-4 w-4" />}
           label="Credit Score"
-          value={customer.creditScore.toString()}
+          value={customer.creditScore?.toString() as string}
           isCreditScore={true}
         />
         <InfoItem
