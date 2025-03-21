@@ -1,4 +1,4 @@
-import type { Customer } from "@/types/customer"
+import type { Customer } from "@/types/customer";
 
 // Mock data for demonstration purposes
 const mockCustomers: Customer[] = [
@@ -41,6 +41,7 @@ const mockCustomers: Customer[] = [
     customerSince: "2021-01-10",
     status: "Active",
     notes: "Interested in expanding services",
+    connections: [],
   },
   {
     id: "C004",
@@ -103,6 +104,7 @@ const mockCustomers: Customer[] = [
     phone: "(303) 555-7531",
     customerSince: "2022-04-05",
     status: "Active",
+    connections: [],
   },
   {
     id: "C009",
@@ -128,22 +130,23 @@ const mockCustomers: Customer[] = [
     status: "Active",
     connections: [{ customerId: "C009", type: "Client" }],
   },
-]
+];
 
 // Simulate API call with delay
 export async function fetchCustomers(): Promise<Customer[]> {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(mockCustomers)
-    }, 800)
-  })
+      resolve(mockCustomers);
+    }, 800);
+  });
 }
 
-export async function fetchCustomerById(id: string): Promise<Customer | undefined> {
+export async function fetchCustomerById(
+  id: string
+): Promise<Customer | undefined> {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(mockCustomers.find((customer) => customer.id === id))
-    }, 300)
-  })
+      resolve(mockCustomers.find((customer) => customer.id === id));
+    }, 300);
+  });
 }
-

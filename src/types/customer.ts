@@ -3,17 +3,28 @@ export type ConnectionType =
   | "Business Partner"
   | "Vendor"
   | "Guarantor"
-  | "Organization Member";
+  | "Organization Member"
+  | "Colleague"
+  | "Former Colleague"
+  | "Investor"
+  | "Investment"
+  | "Supplier"
+  | "Client"
+  | "Employee"
+  | "Former Employee"
+  | "Family Member"
+  | "Former Family Member"
+  | "Other";
 
 export interface Connection {
   type: ConnectionType;
-  description: string;
+  description?: string;
   customerId: string;
 }
 
 export interface Customer {
   id: string;
-  customerId: string;
+  customerId?: string;
   name: string;
   email: string;
   phone: string;
@@ -21,9 +32,9 @@ export interface Customer {
   organization: string;
   accountNumber: string;
   status: string;
-  creditScore: number;
-  tin: string;
-  customerSince?: Date;
+  creditScore?: number;
+  tin?: string;
+  customerSince?: string;
   notes?: string;
   connections: Connection[];
 }
