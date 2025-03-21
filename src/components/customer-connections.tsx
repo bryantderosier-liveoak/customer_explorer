@@ -2,9 +2,8 @@
 
 import { useEffect, useRef, useState } from "react"
 import type { Customer, Connection } from "@/types/customer"
-import { Card, CardContent } from "@/components/ui/card"
-import { findCustomerConnections } from "@/lib/connections"
-import { Network, Search, Filter, ChevronDown } from "lucide-react"
+import { Card } from "@/components/ui/card"
+import { Network, Search, Filter } from "lucide-react"
 
 interface CustomerConnectionsProps {
   customer: Customer
@@ -268,10 +267,8 @@ function drawNetworkGraph(
   const mainNodeColor = "#1C0E52"
   const connectionNodeColor = "#2d1875"
   const hoveredNodeColor = "#3d2485"
-  const lineColor = "#E4E4E7"
   const mainNodeRadius = 60
   const nodeRadius = 45
-  const padding = nodeRadius * 3
 
   // Clear canvas
   ctx.clearRect(0, 0, width, height)

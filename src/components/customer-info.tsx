@@ -1,11 +1,9 @@
 "use client"
 
 import type React from "react"
-import { useState } from 'react'
 
 import type { Customer } from "@/types/customer"
-import { Building, CreditCard, MapPin, Mail, Phone, Calendar, Tag, Hash, TrendingUp, FileText } from "lucide-react"
-import { Card } from "@/components/ui/card"
+import { Building, MapPin, Mail, Phone, Calendar, Tag, Hash, TrendingUp, FileText } from "lucide-react"
 
 interface CustomerInfoProps {
   customer: Customer
@@ -67,15 +65,6 @@ export default function CustomerInfo({ customer }: CustomerInfoProps) {
           isStatus={true}
         />
       </div>
-
-      {customer.notes && (
-        <div className="mt-2">
-          <h4 className="text-sm font-medium text-[#71717A] mb-2">Notes</h4>
-          <div className="p-4 bg-[#F7F6FB] rounded-lg text-sm text-[#1C0E52]">
-            {customer.notes}
-          </div>
-        </div>
-      )}
     </div>
   )
 }

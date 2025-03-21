@@ -1,25 +1,22 @@
 "use client"
 
 import { Card } from "@/components/ui/card"
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
-import CustomerInfo from "@/components/customer-info"
-import CustomerConnections from "@/components/customer-connections"
 import { Search, Filter, X } from "lucide-react"
 import { useState, useEffect } from "react"
-import type { Customer, Connection, ConnectionType } from "@/types/customer"
+import type { Customer, ConnectionType } from "@/types/customer"
 import CustomerDetail from "@/components/customer-detail"
 
 // Mock data
-const mockCustomer = {
-  id: "1",
-  name: "John Smith",
-  email: "john@example.com",
-  phone: "(555) 123-4567",
-  address: "123 Main St, City, State 12345",
-  organization: "Acme Corp",
-  accountNumber: "ACM-001",
-  status: "Active"
-}
+// const mockCustomer = {
+//   id: "1",
+//   name: "John Smith",
+//   email: "john@example.com",
+//   phone: "(555) 123-4567",
+//   address: "123 Main St, City, State 12345",
+//   organization: "Acme Corp",
+//   accountNumber: "ACM-001",
+//   status: "Active"
+// }
 
 // Update mockCustomers to include connections
 const mockCustomers: Customer[] = [
@@ -110,6 +107,7 @@ const mockCustomers: Customer[] = [
   },
   {
     id: "4",
+    customerId: "0013k00003Pr15mAAD",
     name: "Emily Davis",
     email: "emily.d@deltagroup.com",
     phone: "(555) 456-7890",
@@ -134,6 +132,7 @@ const mockCustomers: Customer[] = [
   },
   {
     id: "5",
+    customerId: "0013k00003Pr16nAAD",
     name: "Robert Wilson",
     email: "r.wilson@epsilontech.com",
     phone: "(555) 567-8901",
@@ -158,6 +157,7 @@ const mockCustomers: Customer[] = [
   },
   {
     id: "6",
+    customerId: "0013k00003Pr17oAAD",
     name: "Lisa Anderson",
     email: "l.anderson@zetasys.com",
     phone: "(555) 678-9012",
@@ -182,6 +182,7 @@ const mockCustomers: Customer[] = [
   },
   {
     id: "7",
+    customerId: "0013k00003Pr18pAAD",
     name: "David Martinez",
     email: "d.martinez@etainc.com",
     phone: "(555) 789-0123",
@@ -206,6 +207,7 @@ const mockCustomers: Customer[] = [
   },
   {
     id: "8",
+    customerId: "0013k00003Pr19qAAD",
     name: "Jennifer Taylor",
     email: "j.taylor@thetagroup.com",
     phone: "(555) 890-1234",
@@ -230,6 +232,7 @@ const mockCustomers: Customer[] = [
   },
   {
     id: "9",
+    customerId: "0013k00003Pr1aAAD",
     name: "William Clark",
     email: "w.clark@iotacorp.com",
     phone: "(555) 901-2345",
@@ -254,6 +257,7 @@ const mockCustomers: Customer[] = [
   },
   {
     id: "10",
+    customerId: "0013k00003Pr1bAAD",
     name: "Amanda White",
     email: "a.white@kappatech.com",
     phone: "(555) 012-3456",

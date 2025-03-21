@@ -1,6 +1,5 @@
 "use client"
 
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import type { Customer } from "@/types/customer"
 import { Skeleton } from "@/components/ui/skeleton"

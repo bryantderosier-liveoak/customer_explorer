@@ -2,12 +2,6 @@
 
 import type React from "react"
 
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Search, X } from "lucide-react"
-
 interface CustomerFiltersProps {
   filters: {
     name: string
@@ -22,11 +16,6 @@ interface CustomerFiltersProps {
 }
 
 export function CustomerFilters({ filters, onFilterChange, onClearFilters }: CustomerFiltersProps) {
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target
-    onFilterChange(name, value)
-  }
-
   return (
     <div className="bg-white rounded-lg shadow-sm p-6">
       <div className="flex justify-between items-center mb-4">
